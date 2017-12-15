@@ -19,7 +19,7 @@ _Amy Churchwell, December 15 2017._
 
 * **FLEXBOX** is used for at least 3 major elements/structures (e.g. navbar, page layout, projects gallery)
 
-* Page is **RESPONSIVE** (at least one other screen size)
+* Page is **RESPONSIVE** (at least one other screen size) _Desktop and Tablet_
 
 * **MOTION** : At least one example of transition, transform, or animation.
 
@@ -27,3 +27,8 @@ _Amy Churchwell, December 15 2017._
 Create responsive HTML template using flex-box.
 
 WORK / CONTACT / ABOUT
+
+
+### Hat tip
+
+This student is utilizing Giraudel's [SASS boilerplate](https://github.com/HugoGiraudel/sass-boilerplate) as a beginner's tool for organization and following SASS guidelines. Thanks Hugo!

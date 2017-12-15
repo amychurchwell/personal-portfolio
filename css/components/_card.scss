@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the card component.
+// -----------------------------------------------------------------------------
+
+.card {
+  @include grid(3, 2%){}
+  border: 1px solid $mid-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+
+  & .card-img{
+    height: 100px;
+    width: 100%;
+    background-color: $mid-grey;
+  }
+  & .card-info{
+    & .card-desc{
+
+    }
+  }
+}

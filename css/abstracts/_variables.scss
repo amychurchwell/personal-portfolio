@@ -53,6 +53,12 @@ $max-width: 1180px !default;
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
+
+// Media Queries //
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
 $breakpoints: (
   'small': 320px,
   'medium': 768px,
