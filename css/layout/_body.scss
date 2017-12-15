@@ -9,15 +9,16 @@
 }
 
 .hero {
-  background-color: $light-grey;
   height: 25vh;
   width: 90vw;
 }
 
 .work-container {
-  border: 2px solid $light-grey;
-  background-color: $light-grey;
   height: 64vh;
   width: 90vw;
   padding: 25px;
+  display: flex;
+  @include mobile{
+    flex-direction: column;
+  }
 }
