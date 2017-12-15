@@ -15,8 +15,12 @@
 
 
 
-&.card:nth-child(1){
-  border: 4px solid $solidblue;
+  &.card:nth-child(1){
+    border: 4px solid $solidblue;
+    & .card-img {
+      background-color: $solidblue;
+      background-image: url('../img/project1.jpeg');
+    }
     &.card:nth-child(1):hover {
       background-color: $solidblue;
     }
@@ -27,6 +31,10 @@
 
   &.card:nth-child(2){
     border: 4px solid $solidyellow;
+    & .card-img {
+      background-color: $solidyellow;
+      background-image: url('../img/project2.jpeg');
+    }
     &.card:nth-child(2):hover {
       background-color: $solidyellow;
     }
@@ -36,6 +44,10 @@
   }
   &.card:nth-child(3){
     border: 4px solid $solidred;
+    & .card-img {
+      background-color: $solidred;
+      background-image: url('../img/project3.jpeg');
+    }
     &.card:nth-child(3):hover {
       background-color: $solidred;
     }
@@ -46,27 +58,41 @@
 
   @include mobile {
     width: 100%;
-
-  }
-
-  & .expand {
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 5px;
   }
 
   & .card-img{
-    height: 100px;
+    height: 140px;
     width: 100%;
-    background-color: $mid-grey;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
   }
   & .card-info{
     padding: 10px;
     & .card-desc{
 
     }
+  }
+}
+
+/* CARD RESIZE STYLES */
+
+.expand {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+
+  & i:hover {
+    transform: scale(1.25);
+  }
+
+  & .minus {
+  }
+
+  & .plus {
+
   }
 }
