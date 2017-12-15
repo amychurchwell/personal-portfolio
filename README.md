@@ -15,13 +15,13 @@ _Amy Churchwell, December 15 2017._
 
 #### ! REQUIREMENTS
 
-* **SASS** (7-1 architecture.)
+- [x] **SASS** (7-1 architecture.)
 
-* **FLEXBOX** is used for at least 3 major elements/structures (e.g. navbar, page layout, projects gallery)
+- [ ] **FLEXBOX** is used for at least 3 major elements/structures.
 
-* Page is **RESPONSIVE** (at least one other screen size) _Desktop and Tablet_
+- [x]* Page is **RESPONSIVE** (at least one other screen size)
 
-* **MOTION** : At least one example of transition, transform, or animation.
+- [ ] **MOTION** : At least one example of transition, transform, or animation.
 
 ### elements.
 Create responsive HTML template using flex-box.

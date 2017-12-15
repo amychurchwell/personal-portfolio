@@ -430,7 +430,7 @@ a {
     text-decoration: underline; }
 
 body {
-  background-color: #eeefe4; }
+  background-color: #EEEFE4; }
 
 /**
  * Basic typography style for copy text
@@ -496,6 +496,9 @@ body {
 
 .navbar {
   width: 100%; }
+  @media (max-width: 767px) {
+    .navbar {
+      display: none; } }
   .navbar ul {
     list-style: none;
     padding: 0;
@@ -503,24 +506,57 @@ body {
     justify-content: space-around; }
   .navbar li {
     display: inline-block; }
+  .navbar a:hover {
+    animation: rainbow 1s infinite; }
 
+@keyframes rainbow {
+  0% {
+    color: #ff0000; }
+  10% {
+    color: #ff8000; }
+  20% {
+    color: #ffff00; }
+  30% {
+    color: #80ff00; }
+  40% {
+    color: #00ff00; }
+  50% {
+    color: #00ff80; }
+  60% {
+    color: #00ffff; }
+  70% {
+    color: #0080ff; }
+  80% {
+    color: #0000ff; }
+  90% {
+    color: #8000ff; }
+  100% {
+    color: #ff0080; } }
 .container {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 0;
   border: 1px solid black;
-  height: 95vh;
+  height: 100vh;
   width: 95vw;
   margin-top: 2.5vh; }
+  @media (max-width: 767px) {
+    .container {
+      width: 100vw; } }
 
 .hero {
   height: 25vh;
-  width: 90vw; }
+  width: 90%;
+  background-color: #D5B9B2;
+  padding: 15px; }
+  @media (max-width: 767px) {
+    .hero {
+      width: 100%; } }
 
 .work-container {
   height: 64vh;
-  width: 90vw;
+  width: 90%;
   padding: 25px;
   display: flex; }
   @media (max-width: 767px) {
@@ -534,7 +570,10 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin: 5px; }
+  margin: 5px;
+  height: 50%;
+  overflow: hidden;
+  transition: all 1.5s ease; }
   @media (max-width: 767px) {
     .card {
       width: 100%; } }
