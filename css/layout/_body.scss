@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   padding: 0;
-  border: 1px solid black;
+  border: 4px solid black;
   height: 100vh;
   width: 95vw;
   margin-top: 2.5vh;
@@ -30,10 +30,18 @@
   & svg {
     margin-right: -25px;
     transform: scale(1.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  & svg:hover {
+    transform: scale(2);
   }
 
   & svg:nth-child(1) circle {
     fill: $blue;
+    & :hover{
+      fill: red;
+    }
   }
 
   & svg:nth-child(2){
@@ -49,7 +57,7 @@
 }
 
 .work-container {
-  height: 64vh;
+  @include grid(3, 2%){}
   width: 90%;
   padding: 25px;
   display: flex;
@@ -58,17 +66,21 @@
   }
 }
 
+
 .about-container {
-  background-color: $solidblue;
+  background-color: $light-grey;
   width: 100%;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  & #portrait {
-    width: 100px;
-    height: 100px;
-    background-image: url('../img/photo.jpeg');
-    background-size: cover;
+  & .about {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & #portrait {
+      width: 100px;
+      height: 100px;
+      background-image: url('../img/photo.jpeg');
+      background-size: cover;
+    }
   }
 }

@@ -6,19 +6,28 @@
 }
 
 .card {
-  border: 1px solid #999999;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
+  height: 300px;
   flex-grow: 1;
   margin: 5px;
-  height: 50%;
   overflow: hidden;
   transition: all 300ms ease-in-out;
 
+    & .card-img{
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-blend-mode: multiply;
+      transition: all 300ms ease-in-out;
+    }
+    & .card-info{
+      padding: 10px;
+      height: 50%;
+      width: 100%;
+      background-color: #fff;
+    }
 
-
-  &.card:nth-child(1){
+  &.card:nth-child(2){
     border: 4px solid $solidblue;
     & .card-img {
       background-color: $solidblue;
@@ -29,7 +38,7 @@
     }
   }
 
-  &.card:nth-child(2){
+  &.card:nth-child(3){
     border: 4px solid $solidyellow;
     & .card-img {
       background-color: $solidyellow;
@@ -42,7 +51,7 @@
       border-bottom: 4px solid $solidyellow;
     }
   }
-  &.card:nth-child(3){
+  &.card:last-child{
     border: 4px solid $solidred;
     & .card-img {
       background-color: $solidred;
@@ -58,20 +67,6 @@
 
   @include mobile {
     width: 100%;
-  }
-
-  & .card-img{
-    height: 140px;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: multiply;
-  }
-  & .card-info{
-    padding: 10px;
-    & .card-desc{
-
-    }
   }
 }
 

@@ -445,8 +445,12 @@ body {
   color: #222222;
   font-family: 'Open Sans', sans-serif; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, a {
   font-family: 'Roboto', sans-serif; }
+
+.navbar a {
+  font-weight: 700;
+  color: black; }
 
 /**
  * Clear inner floats
@@ -546,7 +550,7 @@ h1, h2, h3, h4 {
   align-items: center;
   flex-direction: column;
   padding: 0;
-  border: 1px solid black;
+  border: 4px solid black;
   height: 100vh;
   width: 95vw;
   margin-top: 2.5vh; }
@@ -569,9 +573,14 @@ h1, h2, h3, h4 {
       width: 100%; } }
   .hero svg {
     margin-right: -25px;
-    transform: scale(1.5); }
+    transform: scale(1.5);
+    transition: all 300ms ease-in-out; }
+  .hero svg:hover {
+    transform: scale(2); }
   .hero svg:nth-child(1) circle {
     fill: rgba(124, 223, 254, 0.72); }
+    .hero svg:nth-child(1) circle :hover {
+      fill: red; }
   .hero svg:nth-child(2) {
     margin-top: -10px; }
     .hero svg:nth-child(2) circle {
@@ -580,76 +589,83 @@ h1, h2, h3, h4 {
     fill: rgba(255, 0, 2, 0.53); }
 
 .work-container {
-  height: 64vh;
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 32%;
   width: 90%;
   padding: 25px;
   display: flex; }
+  .work-container:nth-child(3n) {
+    margin-right: 0; }
   @media (max-width: 767px) {
     .work-container {
       flex-direction: column; } }
 
 .about-container {
-  background-color: #7cdffe;
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column; }
-  .about-container #portrait {
-    width: 100px;
-    height: 100px;
-    background-image: url("../img/photo.jpeg");
-    background-size: cover; }
+  background-color: #ededed;
+  width: 100%; }
+  .about-container .about {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .about-container .about #portrait {
+      width: 100px;
+      height: 100px;
+      background-image: url("../img/photo.jpeg");
+      background-size: cover; }
 
 .large {
   transform: scale(1.25); }
 
 .card {
-  border: 1px solid #999999;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
+  height: 300px;
   flex-grow: 1;
   margin: 5px;
-  height: 50%;
   overflow: hidden;
   transition: all 300ms ease-in-out; }
-  .card.card:nth-child(1) {
+  .card .card-img {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    transition: all 300ms ease-in-out; }
+  .card .card-info {
+    padding: 10px;
+    height: 50%;
+    width: 100%;
+    background-color: #fff; }
+  .card.card:nth-child(2) {
     border: 4px solid #7cdffe; }
-    .card.card:nth-child(1) .card-img {
+    .card.card:nth-child(2) .card-img {
       background-color: #7cdffe;
       background-image: url("../img/project1.jpeg"); }
-    .card.card:nth-child(1) .expand {
+    .card.card:nth-child(2) .expand {
       border-bottom: 4px solid #7cdffe; }
-  .card.card:nth-child(2) {
+  .card.card:nth-child(3) {
     border: 4px solid #ffe306; }
-    .card.card:nth-child(2) .card-img {
+    .card.card:nth-child(3) .card-img {
       background-color: #ffe306;
       background-image: url("../img/project2.jpeg"); }
-    .card.card:nth-child(2).card:nth-child(2):hover {
+    .card.card:nth-child(3).card:nth-child(2):hover {
       background-color: #ffe306; }
-    .card.card:nth-child(2) .expand {
+    .card.card:nth-child(3) .expand {
       border-bottom: 4px solid #ffe306; }
-  .card.card:nth-child(3) {
+  .card.card:last-child {
     border: 4px solid #ff5544; }
-    .card.card:nth-child(3) .card-img {
+    .card.card:last-child .card-img {
       background-color: #ff5544;
       background-image: url("../img/project3.jpeg"); }
-    .card.card:nth-child(3).card:nth-child(3):hover {
+    .card.card:last-child.card:nth-child(3):hover {
       background-color: #ff5544; }
-    .card.card:nth-child(3) .expand {
+    .card.card:last-child .expand {
       border-bottom: 4px solid #ff5544; }
   @media (max-width: 767px) {
     .card {
       width: 100%; } }
-  .card .card-img {
-    height: 140px;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: multiply; }
-  .card .card-info {
-    padding: 10px; }
 
 /* CARD RESIZE STYLES */
 .expand {
