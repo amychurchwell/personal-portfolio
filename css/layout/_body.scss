@@ -15,10 +15,28 @@
 .hero {
   height: 25vh;
   width: 90%;
-  background-color: $pink;
+  background-color: #efefef;
   padding: 15px;
   @include mobile {
     width: 100%;
+  }
+  & svg {
+    margin-right: -50px;
+
+  }
+  & svg:nth-child(2) circle {
+    fill: $blue;
+  }
+
+  & svg:nth-child(3){
+    margin-top: -10px;
+    & circle {
+      fill: $yellow;
+    }
+  }
+
+  & svg:nth-child(4) circle {
+    fill: $red;
   }
 }
 

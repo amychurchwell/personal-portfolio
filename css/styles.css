@@ -429,15 +429,15 @@ a {
     color: #222222;
     text-decoration: underline; }
 
-body {
-  background-color: #EEEFE4; }
-
 /**
  * Basic typography style for copy text
  */
 body {
   color: #222222;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif; }
 
 /**
  * Clear inner floats
@@ -548,11 +548,21 @@ body {
 .hero {
   height: 25vh;
   width: 90%;
-  background-color: #D5B9B2;
+  background-color: #efefef;
   padding: 15px; }
   @media (max-width: 767px) {
     .hero {
       width: 100%; } }
+  .hero svg {
+    margin-right: -50px; }
+  .hero svg:nth-child(2) circle {
+    fill: rgba(124, 223, 254, 0.72); }
+  .hero svg:nth-child(3) {
+    margin-top: -10px; }
+    .hero svg:nth-child(3) circle {
+      fill: rgba(253, 229, 1, 0.7); }
+  .hero svg:nth-child(4) circle {
+    fill: rgba(255, 0, 2, 0.53); }
 
 .work-container {
   height: 64vh;
