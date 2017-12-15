@@ -4,7 +4,6 @@
 
 .card {
   border: 1px solid #999999;
-  padding: 5px;
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -12,11 +11,51 @@
   margin: 5px;
   height: 50%;
   overflow: hidden;
-  transition: all 1.5s ease;
+  transition: all .5s linear;
+
+
+
+&.card:nth-child(1){
+  border: 4px solid $solidblue;
+    &.card:nth-child(1):hover {
+      background-color: $solidblue;
+    }
+    & .expand {
+      border-bottom: 4px solid $solidblue;
+    }
+  }
+
+  &.card:nth-child(2){
+    border: 4px solid $solidyellow;
+    &.card:nth-child(2):hover {
+      background-color: $solidyellow;
+    }
+    & .expand {
+      border-bottom: 4px solid $solidyellow;
+    }
+  }
+  &.card:nth-child(3){
+    border: 4px solid $solidred;
+    &.card:nth-child(3):hover {
+      background-color: $solidred;
+    }
+    & .expand {
+      border-bottom: 4px solid $solidred;
+    }
+  }
 
   @include mobile {
     width: 100%;
 
+  }
+
+  & .expand {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
   }
 
   & .card-img{
@@ -25,6 +64,7 @@
     background-color: $mid-grey;
   }
   & .card-info{
+    padding: 10px;
     & .card-desc{
 
     }
