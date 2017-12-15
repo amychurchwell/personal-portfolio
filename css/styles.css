@@ -430,7 +430,7 @@ a {
     text-decoration: underline; }
 
 body {
-  background-color: #ededed; }
+  background-color: #eeefe4; }
 
 /**
  * Basic typography style for copy text
@@ -510,8 +510,9 @@ body {
   flex-direction: column;
   padding: 0;
   border: 1px solid black;
-  height: 100vh;
-  overflow: hidden; }
+  height: 95vh;
+  width: 95vw;
+  margin-top: 2.5vh; }
 
 .hero {
   height: 25vh;
