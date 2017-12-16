@@ -4,12 +4,9 @@
   flex-direction: column;
   padding: 0;
   border: 4px solid black;
-  height: 100vh;
   width: 95vw;
   margin-top: 2.5vh;
-  @include mobile {
-    width: 100vw;
-  }
+
 }
 
 .hero {
@@ -57,10 +54,12 @@
 }
 
 .work-container {
-  @include grid(3, 2%){}
-  width: 90%;
+  width: 100% !important;
   padding: 25px;
   display: flex;
+
+  @include grid(3, 2%){}
+
   @include mobile{
     flex-direction: column;
   }
@@ -68,19 +67,38 @@
 
 
 .about-container {
-  background-color: $light-grey;
+  background-color: #daebf1;
   width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+
+  @include mobile {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    }
+
+  & #portrait {
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/photo.jpeg');
+    background-size: cover;
+  }
+
   & .about {
     width: 50%;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    & #portrait {
-      width: 100px;
-      height: 100px;
-      background-image: url('../img/photo.jpeg');
-      background-size: cover;
+
+
+    @include mobile {
+      width: 100%;
+    }
+
+    & p {
+      font-size: 20px;
     }
   }
 }

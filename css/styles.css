@@ -551,12 +551,8 @@ h1, h2, h3, h4, a {
   flex-direction: column;
   padding: 0;
   border: 4px solid black;
-  height: 100vh;
   width: 95vw;
   margin-top: 2.5vh; }
-  @media (max-width: 767px) {
-    .container {
-      width: 100vw; } }
 
 .hero {
   height: 25vh;
@@ -589,13 +585,13 @@ h1, h2, h3, h4, a {
     fill: rgba(255, 0, 2, 0.53); }
 
 .work-container {
+  width: 100% !important;
+  padding: 25px;
+  display: flex;
   float: left;
   margin-right: 2%;
   margin-bottom: 2%;
-  width: 32%;
-  width: 90%;
-  padding: 25px;
-  display: flex; }
+  width: 32%; }
   .work-container:nth-child(3n) {
     margin-right: 0; }
   @media (max-width: 767px) {
@@ -603,19 +599,31 @@ h1, h2, h3, h4, a {
       flex-direction: column; } }
 
 .about-container {
-  background-color: #ededed;
-  width: 100%; }
+  background-color: #daebf1;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px; }
+  @media (max-width: 767px) {
+    .about-container {
+      width: 100%;
+      flex-direction: column;
+      align-items: center; } }
+  .about-container #portrait {
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/photo.jpeg");
+    background-size: cover; }
   .about-container .about {
     width: 50%;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column; }
-    .about-container .about #portrait {
-      width: 100px;
-      height: 100px;
-      background-image: url("../img/photo.jpeg");
-      background-size: cover; }
+    padding: 20px; }
+    @media (max-width: 767px) {
+      .about-container .about {
+        width: 100%; } }
+    .about-container .about p {
+      font-size: 20px; }
 
 .large {
   transform: scale(1.25); }
@@ -674,7 +682,8 @@ h1, h2, h3, h4, a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 5px; }
+  padding: 5px;
+  background-color: white; }
   .expand i:hover {
     transform: scale(1.25); }
 

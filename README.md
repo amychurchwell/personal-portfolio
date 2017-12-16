@@ -17,17 +17,21 @@ _Amy Churchwell, December 15 2017._
 
 - [x] **SASS** (7-1 architecture.)
 
-- [ ] **FLEXBOX** is used for at least 3 major elements/structures.
+- [x] **FLEXBOX** is used for at least 3 major elements/structures.
 
 - [x]* Page is **RESPONSIVE** (at least one other screen size)
 
-- [ ] **MOTION** : At least one example of transition, transform, or animation.
+- [x] **MOTION** : At least one example of transition, transform, or animation.
 
 ### elements.
 Create responsive HTML template using flex-box.
 
 WORK / CONTACT / ABOUT
 
+### notes.
+* Plan for primary color circles to navigate to color-coded sections of page.
+* Add contact form.
+* Add more rows of project cards.
 
 ### Hat tip
 
